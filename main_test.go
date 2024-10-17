@@ -5,7 +5,7 @@ import (
 
 	"github.com/tkrop/go-testing/test"
 
-	"github.com/tkrop/go-make/internal/make"
+	"github.com/buravc/go-make/internal/make"
 )
 
 var testMainParams = map[string]test.MainParams{

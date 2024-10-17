@@ -12,7 +12,7 @@ In the following we use just `make`. Please substitute with `go-make`, if you
 have not installed the wrapper by initially calling `go-make init-make` on a
 project.
 
-[go-make]: https://github.com/tkrop/go-make
+[go-make]: https://github.com/buravc/go-make
 
 
 ## Setup and customization
@@ -109,7 +109,7 @@ TEST_TIMEOUT := 15s
 # Setup when to push images (default: pulls [never, pulls, merges])
 IMAGE_PUSH ?= never
 # Setup specific go-make version.
-GOMAKE := github.com/tkrop/go-make@latest
+GOMAKE := github.com/buravc/go-make@latest
 # Setup the activated commit hooks (default: pre-commit commit-msg).
 GITHOOKS := pre-commit commit-msg
 # Setup code quality level (default: base).
@@ -164,7 +164,7 @@ TOOLS_GO := \
   github.com/icholy/gomajor \
   github.com/golang/mock/mockgen \
   github.com/tkrop/go-testing/cmd/mock \
-  github.com/tkrop/go-make
+  github.com/buravc/go-make
 TOOLS_SH := \
   github.com/anchore/syft \
   github.com/anchore/grype

@@ -4,8 +4,8 @@ package main
 import (
 	"os"
 
+	"github.com/buravc/go-make/internal/make"
 	"github.com/tkrop/go-config/info"
-	"github.com/tkrop/go-make/internal/make"
 )
 
 var (

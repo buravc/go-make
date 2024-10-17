@@ -6,7 +6,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/tkrop/go-make/internal/cmd"
+	"github.com/buravc/go-make/internal/cmd"
 	"github.com/tkrop/go-testing/test"
 )
 

@@ -15,10 +15,10 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
+	"github.com/buravc/go-make/internal/cmd"
+	"github.com/buravc/go-make/internal/log"
+	"github.com/buravc/go-make/internal/make"
 	"github.com/tkrop/go-config/info"
-	"github.com/tkrop/go-make/internal/cmd"
-	"github.com/tkrop/go-make/internal/log"
-	"github.com/tkrop/go-make/internal/make"
 	"github.com/tkrop/go-testing/mock"
 	"github.com/tkrop/go-testing/test"
 )
@@ -32,7 +32,7 @@ import (
 
 const (
 	// goMakePath contains an arbitrary source path for go-make.
-	goMakePath = "github.com/tkrop/go-make"
+	goMakePath = "github.com/buravc/go-make"
 )
 
 var (
