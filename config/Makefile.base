@@ -1,4 +1,4 @@
-## Manual: http://github.com/tkrop/go-make/MANUAL.md
+## Manual: http://github.com/buravc/go-make/MANUAL.md
 SHELL := /bin/bash
 
 # Setup variables for special purposes.
@@ -61,11 +61,11 @@ else ifeq ($(shell uname),Darwin)
   export PATH := $(call path-setup,opt,gsed,sed,$(PATH))
   export PATH := $(call path-setup,opt,make,make,$(PATH))
 else
-  $(call cerror,unsupported operating system [$(shell uname --all)])
+  $(call cerror,unsupported operating system [$(shell uname -a)])
 endif
 
 # Log execution environment for debugging.
-$(call cdebug,$(shell uname --all))
+$(call cdebug,$(shell uname -a))
 $(call cdebug,using BASH [$${0} - $${BASH_VERSION}])
 $(call cdebug,using PATH [$(shell echo -n "$${PATH}")])
 
@@ -153,7 +153,7 @@ export GOBIN ?= $(GOPATH)/bin
 # Export private repositories that do not need to be downloaded.
 export GOPRIVATE ?= github.bus.zalan.do
 # Setup go to use desired and consistent go versions.
-GOVERSION := $(shell $(GO) version $$(which $(GO)) | sed -E "s/.*go([0-9.]+).*/\1/")
+GOVERSION := $(shell $(GO) version $$(asdf which $(GO)) | sed -E "s/.*go([0-9.]+).*/\1/")
 # Function for checking and wanring about go and package version mismatches.
 go-check-version = \
 	if [ -f "$(GOBIN)/$(1)" ]; then \
@@ -237,14 +237,14 @@ go-pkg = $(shell awk -v mode="$(2)" -v filter="$(3)" \
 
 
 # Setup go-make to use desired build and config scripts.
-GOMAKE_DEP := github.com/tkrop/go-make@v0.0.105
+GOMAKE_DEP := github.com/buravc/go-make@v0.0.105
 GOMAKE_MAKEFILE := $(realpath $(firstword $(MAKEFILE_LIST)))
 GOMAKE_MAKEFILES := $(GOMAKE_MAKEFILE) \
 	$(wildcard Makefile.vars) $(wildcard Makefile.ext)
 GOMAKE_CONFIG := $(patsubst %/,%,$(dir $(GOMAKE_MAKEFILE)))
 gomake-version = $(shell if [ ! -f "$(GOBIN)/go-make" ]; then \
 	echo "(devel)"; else $(GO) version -m "$(GOBIN)/go-make" | \
-	grep -E "^\s*(mod|dep)\s*github.com/tkrop/go-make" | cut -f 4; fi)
+	grep -E "^\s*(mod|dep)\s*github.com/buravc/go-make" | cut -f 4; fi)
 
 # Ensure that we can find default config files.
 ifeq ($(wildcard $(GOPATH)/pkg/mod/$(GOMAKE_DEP)/config/),)

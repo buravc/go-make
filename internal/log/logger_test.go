@@ -8,8 +8,8 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
+	"github.com/buravc/go-make/internal/log"
 	"github.com/tkrop/go-config/info"
-	"github.com/tkrop/go-make/internal/log"
 	"github.com/tkrop/go-testing/test"
 )
 

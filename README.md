@@ -13,20 +13,20 @@
 [![Security][security-badge]][security-link]
 -->
 
-[build-badge]: https://github.com/tkrop/go-make/actions/workflows/build.yaml/badge.svg
-[build-link]: https://github.com/tkrop/go-make/actions/workflows/build.yaml
+[build-badge]: https://github.com/buravc/go-make/actions/workflows/build.yaml/badge.svg
+[build-link]: https://github.com/buravc/go-make/actions/workflows/build.yaml
 
-[coveralls-badge]: https://coveralls.io/repos/github/tkrop/go-make/badge.svg?branch=main
-[coveralls-link]: https://coveralls.io/github/tkrop/go-make?branch=main
+[coveralls-badge]: https://coveralls.io/repos/github/buravc/go-make/badge.svg?branch=main
+[coveralls-link]: https://coveralls.io/github/buravc/go-make?branch=main
 
 [coverage-badge]: https://app.codacy.com/project/badge/Coverage/b2bb898346ae4bb4be6414cd6dfe4932
-[coverage-link]: https://app.codacy.com/gh/tkrop/go-make/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_coverage
+[coverage-link]: https://app.codacy.com/gh/buravc/go-make/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_coverage
 
 [quality-badge]: https://app.codacy.com/project/badge/Grade/b2bb898346ae4bb4be6414cd6dfe4932
-[quality-link]: https://app.codacy.com/gh/tkrop/go-make/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade
+[quality-link]: https://app.codacy.com/gh/buravc/go-make/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade
 
-[report-badge]: https://goreportcard.com/badge/github.com/tkrop/go-make
-[report-link]: https://goreportcard.com/report/github.com/tkrop/go-make
+[report-badge]: https://goreportcard.com/badge/github.com/buravc/go-make
+[report-link]: https://goreportcard.com/report/github.com/buravc/go-make
 
 [fossa-badge]: https://app.fossa.com/api/projects/git%2Bgithub.com%2Ftkrop%2Fgo-make.svg?type=shield&issueType=license
 [fossa-link]: https://app.fossa.com/projects/git%2Bgithub.com%2Ftkrop%2Fgo-make?ref=badge_shield&issueType=license
@@ -34,15 +34,15 @@
 [license-badge]: https://img.shields.io/badge/License-MIT-yellow.svg
 [license-link]: https://opensource.org/licenses/MIT
 
-[docs-badge]: https://pkg.go.dev/badge/github.com/tkrop/go-make.svg
-[docs-link]: https://pkg.go.dev/github.com/tkrop/go-make
+[docs-badge]: https://pkg.go.dev/badge/github.com/buravc/go-make.svg
+[docs-link]: https://pkg.go.dev/github.com/buravc/go-make
 
 <!--
-[libs-badge]: https://img.shields.io/librariesio/release/github/tkrop/go-make
-[libs-link]: https://libraries.io/github/tkrop/go-make
+[libs-badge]: https://img.shields.io/librariesio/release/github/buravc/go-make
+[libs-link]: https://libraries.io/github/buravc/go-make
 
-[security-badge]: https://snyk.io/test/github/tkrop/go-make/main/badge.svg
-[security-link]: https://snyk.io/test/github/tkrop/go-make
+[security-badge]: https://snyk.io/test/github/buravc/go-make/main/badge.svg
+[security-link]: https://snyk.io/test/github/buravc/go-make
 -->
 
 ## Introduction
@@ -98,7 +98,7 @@ To install [`go-make`][go-make] simply use [`go` install][go-install] command
 (or any other means, e.g. [`curl`][curl] to obtain a released binary):
 
 ```bash
-go install github.com/tkrop/go-make@latest
+go install github.com/buravc/go-make@latest
 ```
 
 The scripts and configs are automatically checked out in the version matching
@@ -173,8 +173,8 @@ most common tasks, to initialize, build, test, and run the software of this
 project. Read the [go-make manual][go-make-man] for more information about
 targets and configuration options.
 
-[go-make]: <https://github.com/tkrop/go-make>
-[go-make-man]: <https://github.com/tkrop/go-make/blob/main/MANUAL.md>
+[go-make]: <https://github.com/buravc/go-make>
+[go-make-man]: <https://github.com/buravc/go-make/blob/main/MANUAL.md>
 
 The [`Makefile`](Makefile) depends on a preinstalled [`go`][go] for version
 management, and makes heavy use of GNU tools, i.e. [`coretils`][core],
@@ -286,7 +286,7 @@ project [Makefile](config/Makefile) working [`go-make`][go-make] version is to
 run:
 
 ```bash
-go install github.com/tkrop/go-make@latest; go-make update;
+go install github.com/buravc/go-make@latest; go-make update;
 ```
 
 If the latest version is not fixed yet, you can also try to move backward
